@@ -8,3 +8,6 @@ It generates the structure of the UseCase, imports components, make functions fo
 - UseCase ID
 - UseCase Type (single file or multi file)
 - Component's name (MegaSet Number)
+
+
+### VUE + VITE + JSZip
