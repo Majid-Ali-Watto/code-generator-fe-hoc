@@ -1,5 +1,10 @@
-# Vue 3 + Vite
+# Code Genearator
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This generator generates code for UseCase, which is used in my company where I am working as a **Frontend Developer**
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+It generates the structure of the UseCase, imports components, make functions for all components, pass them required parameters, receive data as return so that they can be used in the view manager of `VUE.JS`
+
+### User have to pass following things to generate code.
+- UseCase ID
+- UseCase Type (single file or multi file)
+- Component's name (MegaSet Number)
