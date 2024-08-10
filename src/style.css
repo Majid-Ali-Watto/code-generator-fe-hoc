@@ -1,0 +1,195 @@
+:root {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: black;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+/* header {
+  height: 10%;
+} */
+
+/* main {
+  height: 80%;
+} */
+
+footer {
+  background-color: #1a1a1a;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+    border-top: 1px solid #f9f9f9;
+}
+
+/* footer {
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+} */
+
+footer em {
+  font-style: italic;
+}
+
+footer address {
+  font-style: normal;
+  display: block;
+  margin-top: 5px;
+}
+
+em {
+  color: floralwhite;
+}
+
+h1 {
+  font-size: 2.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: green;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+  background-color: #f9f9f9;
+  color: #1a1a1a;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  width: 30%;
+  text-align: left;
+}
+
+div,
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.row {
+  flex-direction: row;
+}
+
+input,
+textarea,
+select {
+  width: 70%;
+  background-color: white;
+  border: 1px solid skyblue;
+  outline: none;
+  color: #1a1a1a;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+input,
+textarea {
+  text-transform: uppercase;
+}
+
+textarea {
+  height: 100px;
+  /* Adjust as needed */
+  resize: none;
+  /* Prevent user from resizing */
+  overflow: auto;
+  /* Show scrollbars if needed */
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .card {
+    padding: 1em;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  input,
+  textarea,
+  select,
+  label {
+    width: 100%;
+  }
+}
+
+/* Additional styles for form elements */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #646cff;
+  outline: 3px solid #646cff;
+  /* Better visibility on focus */
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: #0056b3;
+  /* Example hover color */
+}
