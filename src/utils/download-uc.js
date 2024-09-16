@@ -14,15 +14,14 @@ export default async function download(MSs, ucName, singleFile) {
 	zip.file(`${extraFiles[1]}`, getApp());
 	zip.file(`${extraFiles[2]}`, vueConfig(ucName.value));
 	zip.file(`${extraFiles[3]}`, env(ucName.value));
-
+	const dirName = `${ucName.value}`;
+	const directory = zip.folder(dirName);
 	if (!singleFile.value) {
 		MSs.value.split(",").forEach((file) => {
-			zip.file(`ms${file}Def.js`, file == 8 ? getMS8Code() : getFileCode(file));
+			directory.file(`ms${file}Def.js`, file == 8 ? getMS8Code() : getFileCode(file));
 		});
-		zip.file(`${ucName.value}.js`, createMainFile(MSs, ucName, singleFile));
+		directory.file(`${ucName.value}.js`, createMainFile(MSs, ucName, singleFile));
 	} else {
-		const dirName = `${ucName.value}`;
-		const directory = zip.folder(dirName);
 		directory.file(`${ucName.value}.js`, createMainFile(MSs, ucName, singleFile));
 	}
 	try {
