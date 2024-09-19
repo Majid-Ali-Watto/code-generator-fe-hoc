@@ -12,7 +12,7 @@ VUE_APP_REMOTE_FE_BASE_URL=https://services.teresol-bahl.com/fe/
 VUE_APP_FSM_URL_${ucName}=http://192.168.236.176:3500/fsm/${ucName}
 
 VUE_APP_APPVERSION="ALHABIB VERSION 1.31.6 (TeReSol)"
-VUE_APP_REDIRECTURI=http://192.168.236.162:3100/
+VUE_APP_REDIRECTURI=http://localhost:3100/
 VUE_APP_KEYCLOAKURL=https://services.teresol-bahl.com/auth
     `;
 }

@@ -3,12 +3,14 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: black;
+  /* color: rgba(255, 255, 255, 0.87); */
+  color: #1a1a1a;
+  background-color: #EBEBEB;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --text-color:#1a1a1a;
 }
 
 body {
@@ -24,32 +26,27 @@ body {
   position: relative;
 }
 
-/* header {
-  height: 10%;
-} */
-
-/* main {
-  height: 80%;
-} */
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
 
 footer {
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   text-align: center;
   padding: 10px 0;
-    border-top: 1px solid #f9f9f9;
+  border-top: 1px dotted #1a1a1a;
+}
+footer:hover{
+  background-color: #f9f9f9;
+  transition: all 0.25s;
 }
 
-/* footer {
-  background-color: #f4f4f4;
-  color: #333;
-  text-align: center;
-  padding: 10px 0;
-  border-top: 1px solid #ddd;
-} */
 
 footer em {
   font-style: italic;
@@ -59,10 +56,6 @@ footer address {
   font-style: normal;
   display: block;
   margin-top: 5px;
-}
-
-em {
-  color: floralwhite;
 }
 
 h1 {
@@ -77,9 +70,10 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: green;
+  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  color: #f9f9f9;
 }
 
 button:hover {
@@ -94,10 +88,17 @@ button:focus-visible {
 .card {
   padding: 2em;
   background-color: #f9f9f9;
-  color: #1a1a1a;
+  /* color: #1a1a1a; */
   width: 100%;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid #1a1a1a;
+}
+.card:hover{
+  transform: scale(1.01);
+  transition: all 0.25s;
+  box-shadow: 1px 1px 2px 2px lightblue inset, -1px -1px 2px 2px lightblue inset;
 }
 
 label {
@@ -122,7 +123,7 @@ textarea,
 select {
   width: 70%;
   background-color: white;
-  border: 1px solid skyblue;
+  border: 1px solid #1a1a1a;
   outline: none;
   color: #1a1a1a;
   font-size: 16px;
@@ -136,11 +137,8 @@ textarea {
 
 textarea {
   height: 100px;
-  /* Adjust as needed */
   resize: none;
-  /* Prevent user from resizing */
   overflow: auto;
-  /* Show scrollbars if needed */
 }
 
 #app {
@@ -183,7 +181,7 @@ input:focus,
 textarea:focus,
 select:focus {
   border-color: #646cff;
-  outline: 3px solid #646cff;
+  outline: 1px solid #646cff;
   /* Better visibility on focus */
 }
 

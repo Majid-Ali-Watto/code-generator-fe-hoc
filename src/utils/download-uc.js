@@ -20,10 +20,9 @@ export default async function download(MSs, ucName, singleFile) {
 		MSs.value.split(",").forEach((file) => {
 			directory.file(`ms${file}Def.js`, file == 8 ? getMS8Code() : getFileCode(file));
 		});
-		directory.file(`${ucName.value}.js`, createMainFile(MSs, ucName, singleFile));
-	} else {
-		directory.file(`${ucName.value}.js`, createMainFile(MSs, ucName, singleFile));
 	}
+	directory.file(`${ucName.value}.js`, createMainFile(MSs, ucName, singleFile));
+
 	try {
 		// Generate the zip file
 		const content = await zip.generateAsync({ type: "blob" });

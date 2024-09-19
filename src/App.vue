@@ -29,14 +29,14 @@ function checkMS(event) {
 
 async function createUC(event) {
     event.preventDefault();
-    await download(MSs, ucName, singleFile)
+    download(MSs, ucName, singleFile)
         .then(() => {
             alert(ucName.value + " created");
             MSs.value = "";
             ucName.value = "";
             singleFile.value = true;
         })
-        .catch((err) => alert(ucName.value + " failed to create "+ err));
+        .catch((err) => alert(ucName.value + " failed to create " + err));
 }
 </script>
 
